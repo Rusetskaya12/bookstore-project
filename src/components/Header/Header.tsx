@@ -1,5 +1,5 @@
 import { HeaderNav } from "../HeaderNavig/HeaderNavig";
-import { ReactComponent as LogoIcon } from "../../assets/icons/Bookstore-logo.svg";
+import { ReactComponent as LogoIcon } from "../../assets/icons/bookstore-logo.svg";
 import { Search } from "../Search/Search";
 import { LogoWrapper, StyledHeader } from "./styles";
 
