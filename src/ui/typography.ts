@@ -60,4 +60,4 @@ const B2 = css`
   letter-spacing: 0px;
 `;
 
-export { H1, H2, H3, S1, B1, B2 };
+export const Typography =  { H1, H2, H3, S1, B1, B2 };

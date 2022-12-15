@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { Color, Media } from "../../ui";
-import { B1 } from "../../ui/typography";
+import { Color, Media } from "ui";
+import { B1 } from "ui/typography";
+
 
 export const StyledSearch = styled.input`
   width: 50%;

@@ -1,7 +1,7 @@
-import { HeaderNav } from "../HeaderNavig/HeaderNavig";
-import { ReactComponent as LogoIcon } from "../../assets/icons/bookstore-logo.svg";
-import { Search } from "../Search/Search";
-import { LogoWrapper, StyledHeader } from "./styles";
+/* eslint-disable react/jsx-no-undef */
+import { HeaderNav } from "components/HeaderNavig/HeaderNavig";
+import { Search } from "components/Search/Search";
+import { StyledHeader, LogoWrapper } from "./styles";
 
 export const Header = () => {
   return (

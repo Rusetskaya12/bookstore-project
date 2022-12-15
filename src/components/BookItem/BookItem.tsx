@@ -1,24 +1,17 @@
-interface IProps {
-	image: string;
-	price: string;
-	subtitle: string;
-	title: string;
-	url: string;
-	key: string;
-  };
+import { INewBookApi } from "services";
+import { StyledBookItem, BookImg, BookTitle, BookSubtitle, BookPrice } from "./styles";
 
-export const BookItem = ({ image, price, subtitle, title, url }: IProps) => {
+interface IProps {
+	book: INewBookApi;
+  }
+  
+export const BookItem = ({ book }: IProps) => {
   return (
-	  <a href={url}>
-      <div>
-		  <img src={image} alt={title} />
-      </div>
-      <h3>{title}</h3>
-      <p>{subtitle}</p>
-      <div>
-		  <span>{price}</span>
-		  <span></span>
-      </div>
-	  </a>
+	  <StyledBookItem key={book.isbn13}>
+      <BookImg src={book.image} alt={book.title} />
+      <BookTitle>{book.title}</BookTitle>
+      <BookSubtitle>{book.subtitle}</BookSubtitle>
+      <BookPrice>{book.price}</BookPrice>
+	  </StyledBookItem>
   );
 };

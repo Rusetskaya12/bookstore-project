@@ -1,5 +1,6 @@
-import { HeaderLink } from "../HeaderLink/HeaderLink";
+import { HeaderLink } from "components/HeaderLink/HeaderLink";
 import { StyledNavig } from "./styles";
+
 
 export const HeaderNav = () => {
   return (

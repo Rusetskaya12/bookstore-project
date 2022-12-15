@@ -1,3 +1,4 @@
-import { booksAPI } from "./ibooksApi";
 
-export { booksAPI };
+
+export { bookstoreAPI };
+export type { INewBookApi, INewBooksApi, ISearchBooksApi, IBookDetailsApi };

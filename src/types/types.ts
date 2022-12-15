@@ -1,15 +1,14 @@
-export interface IBook {
-	image: string;
-	isbn13: string;
-	price: string;
-	subtitle: string;
-	title: string;
-	url: string;
+import { IBookDetailsApi, INewBookApi } from "services";
+
+export interface IBookDetails {
+	book: IBookDetailsApi;
+	error: null | string;
+	isLoading: boolean;
   }
   
-export interface IResponseBooks {
-	error: string;
-	total: string;
-	books: IBook[];
+export interface INewBooks {
+	books: INewBookApi[];
+	error: null | string;
+	isLoading: boolean;
   }
   

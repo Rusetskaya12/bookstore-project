@@ -1,44 +1,20 @@
-import { useEffect, useState } from "react";
-import { booksAPI } from "../../services";
-import { IResponseBooks } from "../../types";
-import { BookItem } from "../BookItem/BookItem";
-import { Title } from "../Title/Title";
-import { StyledBooksList } from "./styles";
+import { BookItem } from "components/BookItem/BookItem";
+import { INewBookApi } from "services";
+import { StyledBookList } from "./styles";
 
-export const BooksList = () => {
-  const [booksList, setBooksList] = useState<IResponseBooks>(
-	  {} as IResponseBooks
-  );
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-	  booksAPI
-      .setNewBooks()
-      .then(setBooksList)
-      .finally(() => {
-		  setIsLoading(false);
-      });
-  }, []);
-  
-  if (isLoading) {
-	  return <Title text="New Releases Books" />;
-  }
+interface IProps {
+  books: INewBookApi[];
+}
+
+export const BookList = ({ books }: IProps) => {
   return (
-	  <section>
-      <Title text="New Releases Books" />
-      <StyledBooksList>
-		  {booksList.books.map(
-          ({ isbn13, image, price, title, subtitle, url }) => (
-			  <BookItem
-              key={isbn13}
-              image={image}
-              price={price}
-              subtitle={subtitle}
-              title={title}
-              url={url}
-			  />
-          )
-		  )}
-      </StyledBooksList>
-	  </section>
+    <>
+      {" "}
+      <StyledBookList>
+        {books.map((book) => (
+          <BookItem book={book} key={book.isbn13} />
+        ))}
+      </StyledBookList>
+    </>
   );
 };

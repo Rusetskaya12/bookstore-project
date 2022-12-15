@@ -1,21 +1,11 @@
 import styled from "styled-components";
-import { Media } from "../../ui";
-import { Margin1 } from "../../ui/margin";
+import { Margin } from "ui/margin";
 
-export const StyledBooksList = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 32px;
-  grid-row-gap: 48px;
-  margin-bottom: ${Margin1.desktop};
-  ${Media.LG} {
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    grid-column-gap: 32px;
-    grid-row-gap: 48px;
-  }
-  ${Media.MD} {
-    grid-template-columns: 1fr;
-    grid-row-gap: 48px;
-  }
+export const StyledBookList = styled.ul`
+display: grid;
+place-items: center;
+grid-template-columns: repeat(auto-fill, minmax(352px, 1fr));
+column-gap: ${Margin.ExtraMedium};
+row-gap: ${Margin.SuperLarge};
 `;
+

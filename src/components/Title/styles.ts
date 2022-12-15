@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Media } from "../../ui";
-import { Margin3 } from "../../ui/margin";
-import { H1 } from "../../ui/typography";
+import { Media } from "ui";
+
 
 export const StyledTitle = styled.h1`
   ${H1}

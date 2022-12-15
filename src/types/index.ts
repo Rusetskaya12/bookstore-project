@@ -1,3 +1,4 @@
-import { IBook, IResponseBooks } from "./types";
+import { IBookDetails, INewBooks } from "./types";
 
-export type { IBook, IResponseBooks };
+
+export type { IBookDetails, INewBooks };

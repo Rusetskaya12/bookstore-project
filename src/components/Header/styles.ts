@@ -1,15 +1,32 @@
 import styled from "styled-components";
-import { Color } from "../../ui";
-import { Margin1 } from "../../ui/margin";
+import { Color, Media } from "ui";
+import { Margin } from "ui/margin";
 
-export const StyledHeader = styled.header`
+
+
+export const StyledHeader = styled.ul`
   display: flex;
   justify-content: space-between;
-  padding: 24px 0px 24px 0px;
-  margin-bottom: ${Margin1.desktop};
-  border-bottom: 1px solid ${Color.Gray};
+  align-items: center;
+  padding-bottom: ${Margin.SuperLarge};
+  margin-top: ${Margin.Medium};
+  border-bottom: 2px solid ${Color.Gray};
 `;
 
-export const LogoWrapper = styled.div`
-  padding: 14px 0px 14px 0px;
+export const LogoIcons = styled(Logo)`
+  cursor: pointer;
+
+  :hover path {
+    fill: ${Color.Secondary};
+    transition: 0.3s ease;
+  }
+  :active path {
+    fill: ${Color.Primary};
+    transition: 0.3s ease;
+  }
+
+  ${Media.SM} {
+    width: 122px;
+    height: 25px;
+  }
 `;
